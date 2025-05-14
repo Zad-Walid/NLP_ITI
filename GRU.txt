@@ -1,0 +1,27 @@
+A recurrent neural network (RNN) is an extension of a conventional feedforward neural network,
+which is able to handle a variable-length sequence input. The RNN handles the variable-length sequence by having a recurrent hidden state 
+whose activation at each time is dependent on that of the previous time.
+
+it was observed that it is difficult to train RNNs to capture long-term dependencies because the gradients tend to either vanish or explode.
+This makes gradient-based optimization method struggle,not just because of the variations in gradient magnitudes but because of the effect of long-term
+dependencies is hidden by the effect of short-term dependencies
+
+One approach, is to design a more sophisticated activation function than a usual activation function,
+consisting of affine transformation followed by a simple element-wise nonlinearity by using gating units.
+The earliest attempt in this direction resulted in an activation function, or a recurrent unit, called a long short-term memory (LSTM)
+More recently, another type of recurrent unit, to which werefer as a gated recurrent unit (GRU)
+
+A gated recurrent unit (GRU) was proposed by Cho et al. [2014] to make each recurrent unit to adaptively capture dependencies of different time scales. 
+Similarly to the LSTM unit, the GRU has gating units that modulate the flow of information inside the unit, however, without having a separate
+memory cells.
+
+These two units however have a number of differences as well.
+One feature of the LSTM unit that is missing from the GRU is the controlled exposure of the memory content.
+In the LSTM unit, the amount of the memory content that is seen, or used by other units in the network is controlled by the output gate.
+On the other hand the GRU exposes its full content without any control.
+Another difference is in the location of the input gate, or the corresponding reset gate.
+The LSTM unit computes the new memory content without any separate control of the amount of information lowing from the previous time step.
+Rather, the LSTM unit controls the amount of the new memory content being added to the memory cell independently from the forget gate.
+On the other hand, the GRUcontrols the information flow from the previous activation when computing the new, candidate activation,
+but does not independently control the amount of the candidate activation being added.
+

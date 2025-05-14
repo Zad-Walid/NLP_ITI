@@ -1,0 +1,13 @@
+ROUGE-N is a metric in natural language processing used to evaluate the quality of generated text, 
+such as summaries or translations, by measuring the overlap of n-grams between the generated text and a reference text.
+It calculates precision, recall, and F1-score based on the n-gram overlap,
+with ROUGE-1 focusing on single words (unigrams) and ROUGE-2 on two-word sequences (bigrams)
+
+
+N-gram Overlap:
+ROUGE-N assesses how many n-grams (sequences of n words) are shared between the generated text and the reference text. 
+Recall, Precision, and F1-score:
+These are calculated based on the n-gram overlap. 
+Recall measures how many n-grams in the reference text are also present in the generated text, precision measures how many n-grams in the generated text are also present in the reference text, and F1-score is the harmonic mean of recall and precision. 
+Types of ROUGE-N:
+ROUGE-1, ROUGE-2, and ROUGE-3 are common variants, each focusing on different n-gram lengths (unigrams, bigrams, and trigrams respectively). 
