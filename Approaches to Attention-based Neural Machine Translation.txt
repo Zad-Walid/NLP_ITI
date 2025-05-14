@@ -1,0 +1,14 @@
+Effective Approaches to Attention-based Neural Machine Translation
+Our various attention-based models are classifed into two broad categories, global and local.
+These classes differ in terms of whether the “attention” is placed on all source positions or on only a few source positions. 
+
+The idea of a global attentional model is to consider all the hidden states of the encoder when deriving the context vector ct. 
+
+The global attention has a drawback that it has to attend to all words on the source side for each target word,
+which is expensive and can potentially render it impractical to translate longer sequences,
+e.g., paragraphs or documents.
+
+To address this deficiency, we propose a local attentional mechnism that chooses to focus only on a small subset
+of the source positions per target word.
+
+
